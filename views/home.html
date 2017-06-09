@@ -12,7 +12,7 @@
             <div class="featuredproduct" ng-repeat="featuredProduct in featuredProducts">
                 <span>New</span>
                 <div class="featuredproductImg">
-                    <img ng-src="images/products/{{featuredProduct.product_img}}" alt="Image">
+                    <img ng-src="{{featuredProduct.product_img}}" alt="{{featuredProduct.name}}">
                 </div>
                 <div class="featuredproductCapt">
                     <h4>{{featuredProduct.name}}</h4>
