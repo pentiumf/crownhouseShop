@@ -1,6 +1,6 @@
 <div class="thumbnail_control">
     <div ng-repeat="productImg in productImages">
         <input type="radio" name="thumbnail" id="thumb{{productImg.image_id}}" checked>
-        <label for="thumb{{productImg.image_id}}"> <img ng-src="images/productImages/{{productImg.image_src}}" class="thumbViewImg" alt="{{productImg.name}}"> </label> <img ng-src="images/productImages/{{productImg.image_src}}" class="thumbImgControl" alt="{{productImg.name}}"> 
+        <label for="thumb{{productImg.image_id}}"> <img ng-src="{{productImg.image_src}}" class="thumbViewImg" alt="{{productImg.name}}"> </label> <img ng-src="{{productImg.image_src}}" class="thumbImgControl" alt="{{productImg.name}}"> 
     </div>
 </div>

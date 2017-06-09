@@ -8,7 +8,7 @@
         <div class="shopCategory" ng-repeat="category in categories">
             <div class="shopCategory_img">
                 <a href="#/products/{{category.sub_id}}/{{category.sub_name | lowercase}}">
-                    <img ng-src="images/shopCategories/{{category.sub_image}}" alt="{{category.sub_name}}">
+                    <img ng-src="{{category.sub_image}}" alt="{{category.sub_name}}">
                 </a>
             </div>
             <div class="shopCategory_cap">

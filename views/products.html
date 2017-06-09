@@ -7,7 +7,7 @@
        
         <div ng-repeat="product in products" class="product">
             <div class="product_img">
-                <a href="#/product/{{product.id}}"><img ng-src="images/products/{{product.product_img}}" alt=""></a>
+                <a href="#/product/{{product.id}}"><img ng-src="{{product.product_img}}" alt="{{product.name}}"></a>
             </div>
             <div class="products_cap"> <a href="#/product/{{product.id}}" class="products_name">{{product.name}}</a>
                 <p class="products_size">{{product.size}}</p>
