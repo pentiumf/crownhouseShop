@@ -1,0 +1,23 @@
+<div class="view-wrapper clearfix">
+   
+    <div class="view-header">
+        <h1>Shop Departments</h1>
+    </div>
+    
+    <div class="view-container clearfix">
+        
+        <div class="explore" ng-repeat="department in shopDepartments">
+            <div class="explore-img">
+                <a href="#/shop-category/{{department.id}}/{{department.category | lowercase}}">
+                    <img ng-src="images/shopDept/{{department.image}}" alt="{{department.category}}">
+                </a>
+            </div>
+            <div class="explore-caption">
+                <h3>{{department.category}}</h3>
+                <a href="#/shop-category/{{department.id}}/{{department.category | lowercase}}">Shop</a>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

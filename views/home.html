@@ -1,0 +1,27 @@
+<div class="view-wrapper clearfix">
+    <div class="view-header">
+        <h1>Featured Products</h1>
+    </div>
+    
+    <div class="view-container clearfix">
+        <div class="filter_wrap">
+            
+        </div>
+        <div class="products_wrap clearfix">
+            
+            <div class="featuredproduct" ng-repeat="featuredProduct in featuredProducts">
+                <span>New</span>
+                <div class="featuredproductImg">
+                    <img ng-src="images/products/{{featuredProduct.product_img}}" alt="Image">
+                </div>
+                <div class="featuredproductCapt">
+                    <h4>{{featuredProduct.name}}</h4>
+                    <p>{{featuredProduct.price | currency : "Ghc"}}</p>
+                    <i>{{featuredProduct.size}}</i>
+                </div>
+                <a href="#/product/{{featuredProduct.id}}"></a>
+            </div>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="view-wrapper clearfix">
+    <div class="view-header">
+        <h1>{{productDetail.name}}</h1>
+    </div>
+    
+    <div class="view-container clearfix">
+        <div class="product-deatils-container">
+           
+            <div class="productDetails_addPrice">
+                <div class="product_price">
+                    <p>
+                        <i class="fa fa-tag"></i>
+                        <span>{{productDetail.price | currency : "Ghc"}}</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="product_image clearfix">
+                <thumbnail></thumbnail>
+            </div>
+            <div class="product_details">
+               
+                <div>
+                    <h4>Description</h4>
+                    <p>{{productDetail.description}}</p>
+                </div>
+                
+                <div>
+                    <h4>Size</h4>
+                    <p>{{productDetail.size}}</p>
+                </div>
+                
+                <div>
+                    <h4>Price</h4>
+                    <p>{{productDetail.price | currency : "Ghc"}}</p>
+                </div>
+                
+                <div>
+                    <ngcart-addtocart id="{{productDetail.id}}" name="{{productDetail.name}}" price="{{ productDetail.price }}" quantity="1" quantity-max="30" data="productDetail" template-url="ngCart/addtocart.html"> Add to Cart</ngcart-addtocart>
+                </div>
+                
+                <div>
+                    <a href="#/cart" class="proceedToCart"> <i class="fa fa-cart-plus"></i> Proceed to cart</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

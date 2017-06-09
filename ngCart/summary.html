@@ -1,0 +1,10 @@
+<div class="cartSumryWrap clearfix">
+    <div class="cart_icon">
+    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+
+    </div>
+    <div class="cartSumDetails">{{ ngCart.getTotalItems() }}
+        <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize>
+
+    </div>
+</div>

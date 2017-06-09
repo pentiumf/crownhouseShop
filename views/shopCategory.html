@@ -1,0 +1,21 @@
+<div class="view-wrapper clearfix">
+    <div class="view-header">
+        <h1>Browse Categories</h1>
+    </div>
+    
+    <div class="view-container clearfix">
+       
+        <div class="shopCategory" ng-repeat="category in categories">
+            <div class="shopCategory_img">
+                <a href="#/products/{{category.sub_id}}/{{category.sub_name | lowercase}}">
+                    <img ng-src="images/shopCategories/{{category.sub_image}}" alt="{{category.sub_name}}">
+                </a>
+            </div>
+            <div class="shopCategory_cap">
+                <h4>{{category.sub_name}}</h4>
+                <a href="#/products/{{category.sub_id}}/{{category.sub_name | lowercase}}">Shop Now</a>
+            </div>
+        </div>
+        
+    </div>
+</div>

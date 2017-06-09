@@ -1,0 +1,74 @@
+
+<div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
+    Your cart is empty
+</div>
+
+<div class="cartDetailsTableWrap" ng-show="ngCart.getTotalItems() > 0">
+
+    <table class="cartDetailsTable ngCart cart">
+
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        
+        
+        <tfoot>
+        <tr ng-show="ngCart.getTax()">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Tax ({{ ngCart.getTaxRate() }}%):</td>
+            <td>{{ ngCart.getTax() | currency }}</td>
+        </tr>
+        <tr ng-show="ngCart.getShipping()">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Shipping:</td>
+            <td>{{ ngCart.getShipping() | currency }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total:</td>
+            <td>{{ ngCart.totalCost() | currency : "Ghc" }}</td>
+        </tr>
+        </tfoot>
+        
+        
+        <tbody>
+        <tr ng-repeat="item in ngCart.getCart().items track by $index">
+            <td><span class="removeItemList" ng-click="ngCart.removeItemById(item.getId())" ><i class="fa fa-times-circle-o" aria-hidden="true"></i></span></td>
+            <td> <img ng-src="images/products/{{item.getData().product_img}}" alt=""></td>
+            <td>{{ item.getName() }}</td>
+            <td class="add_remove_item_control"><span ng-class="{'disabled':item.getQuantity()==1}"
+                      ng-click="item.setQuantity(-1, true)"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>&nbsp;&nbsp;
+                <b>{{ item.getQuantity() | number }}</b>&nbsp;&nbsp;
+                <span ng-click="item.setQuantity(1, true)"><i class="fa fa-plus-circle" aria-hidden="true"></i></span></td>
+            <td>{{ item.getPrice() | currency : "Ghc"}}</td>
+            <td>{{ item.getTotal() | currency : "Ghc"}}</td>
+        </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+<style>
+    .ngCart.cart span[ng-click] {
+        cursor: pointer;
+    }
+    .ngCart.cart .glyphicon.disabled {
+        color:#aaa;
+    }
+</style>

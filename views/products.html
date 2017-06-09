@@ -1,0 +1,22 @@
+<div class="view-wrapper clearfix">
+    <div class="view-header">
+        <h1>Shop Products</h1>
+    </div>
+    
+    <div class="view-container clearfix">
+       
+        <div ng-repeat="product in products" class="product">
+            <div class="product_img">
+                <a href="#/product/{{product.id}}"><img ng-src="images/products/{{product.product_img}}" alt=""></a>
+            </div>
+            <div class="products_cap"> <a href="#/product/{{product.id}}" class="products_name">{{product.name}}</a>
+                <p class="products_size">{{product.size}}</p>
+                <p class="products_price">{{product.price | currency : "Ghc"}}</p>
+                <p class="products_cart">
+                    <ngcart-addtocart id="{{product.id}}" name="{{product.name}}" price="{{ product.price }}" quantity="1" quantity-max="30" data="product" template-url="ngCart/addtocart.html"> Add to Cart</ngcart-addtocart>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</div>
