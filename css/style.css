@@ -910,6 +910,18 @@ nav ul li a:hover, nav ul li a:active {
 	margin-bottom: 5px;
 }
 
+/*footer bottom*/
+#footer-bottom {
+    text-align: center;
+    padding: 30px;
+}
+
+#footer-bottom h3 {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+
 
 /***************************************
             MEDIA QUERY IPAD
@@ -1266,7 +1278,11 @@ nav ul li a:hover, nav ul li a:active {
     }
 	
     .search-wrap input {
-        min-width: 270px;
+        min-width: 150px;
+    }
+    
+    .search-wrap input:focus {
+        min-width: 180px;
     }
     
     .search-cart {
@@ -1274,8 +1290,8 @@ nav ul li a:hover, nav ul li a:active {
     }
     
     .search-site {
-        margin-right: 0;
-        margin-top: 6px;
+        margin-right: 62px;
+        margin-top: 13px;
     }
     
     
@@ -1455,6 +1471,10 @@ nav ul li a:hover, nav ul li a:active {
         margin: 0;
     }
     
+/*    footer*/
+    #footer-bottom h3 {
+        font-size: 16px;
+    }
 }
 
 
